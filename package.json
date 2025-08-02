@@ -1,6 +1,6 @@
 {
   "name": "capacitor-unity-ads",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "Capacitor plugin for Unity Ads integration with support for rewarded video and interstitial ads",
   "main": "dist/plugin.cjs.js",
   "module": "dist/esm/index.js",
@@ -19,10 +19,10 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/eliazv/capacitor-meta-ads.git.git"
+    "url": "git+https://github.com/eliazv/capacitor-unity-ads.git"
   },
   "bugs": {
-    "url": "https://github.com/eliazv/capacitor-meta-ads.git/issues"
+    "url": "https://github.com/eliazv/capacitor-unity-ads/issues"
   },
   "keywords": [
     "capacitor",

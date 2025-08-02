@@ -2,7 +2,6 @@ package com.eliazavatta.plugins.unityads;
 
 import android.content.Context;
 import android.util.Log;
-
 import com.unity3d.ads.IUnityAdsInitializationListener;
 import com.unity3d.ads.IUnityAdsLoadListener;
 import com.unity3d.ads.IUnityAdsShowListener;
@@ -10,6 +9,7 @@ import com.unity3d.ads.UnityAds;
 import com.unity3d.ads.UnityAdsShowOptions;
 
 public class Unityads {
+
     private static final String TAG = "UnityAds";
 
     private boolean isInitialized = false;
@@ -66,7 +66,6 @@ public class Unityads {
 
             // Initialize Unity Ads
             UnityAds.initialize(context, gameId, testMode, initializationListener);
-
         } catch (Exception e) {
             Log.e(TAG, "Failed to initialize Unity Ads", e);
             callback.onError("Initialization failed: " + e.getMessage());
@@ -102,7 +101,6 @@ public class Unityads {
             };
 
             UnityAds.load(placementId, loadListener);
-
         } catch (Exception e) {
             Log.e(TAG, "Error loading rewarded video", e);
             callback.onError("Error loading rewarded video: " + e.getMessage());
@@ -159,7 +157,6 @@ public class Unityads {
             };
 
             UnityAds.show(activity, currentRewardedPlacementId, new UnityAdsShowOptions(), showListener);
-
         } catch (Exception e) {
             Log.e(TAG, "Error showing rewarded video", e);
             callback.onError("Error showing rewarded video: " + e.getMessage());
@@ -199,7 +196,6 @@ public class Unityads {
             };
 
             UnityAds.load(placementId, loadListener);
-
         } catch (Exception e) {
             Log.e(TAG, "Error loading interstitial", e);
             callback.onError("Error loading interstitial: " + e.getMessage());
@@ -248,7 +244,6 @@ public class Unityads {
             };
 
             UnityAds.show(activity, currentInterstitialPlacementId, new UnityAdsShowOptions(), showListener);
-
         } catch (Exception e) {
             Log.e(TAG, "Error showing interstitial", e);
             callback.onError("Error showing interstitial: " + e.getMessage());
@@ -273,6 +268,4 @@ public class Unityads {
             return "unknown";
         }
     }
-
-
 }
